@@ -142,8 +142,34 @@ START_TEST(test_2d_midpoint)
     exp.y = 3;
     ck_assert(coord_2d_eq(&mid, &exp));
 
+
 }
 END_TEST
+
+START_TEST(test_2d_area_triangle)
+{
+    a.x = 0;
+    a.y = 0;
+    b.x = 2.0;
+    b.y = 0.0;
+    c.x = 2.0;
+    c.y = 0;
+
+    ck_assert(coord_2d_area_triangle(&a , &b , &c) == 2.0);
+
+
+    a.x = 1;
+    a.y = 1;
+    b.x = 1.0;
+    b.y = 3.0;
+    c.x = 3.0;
+    c.y = 1;
+
+    ck_assert(coord_2d_area_triangle(&a , &b , &c) == 2.0);
+
+
+
+}
 
 /* coord_2d Test Suite */
 Suite* coord_2d_suite(void)
