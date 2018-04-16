@@ -1,4 +1,5 @@
 language: C
 compiler: gcc
+sudo: enabled
 install: make dep
 script: make test
