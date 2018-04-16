@@ -27,6 +27,7 @@ dep:
 
 test: geometry_test
 	./geometry_test
+	ls -la
 
 clean:
 	$(RM) *.o
