@@ -26,8 +26,8 @@ dep:
 	sudo apt-get install check
 
 test: geometry_test
-	./geometry_test
 	ls -la
+	./geometry_test
 
 clean:
 	$(RM) *.o
