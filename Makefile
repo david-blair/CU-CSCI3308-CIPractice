@@ -26,8 +26,6 @@ dep:
 	sudo apt-get install check
 
 test: geometry_test
-	ls -la
-	chmod +x geometry_test
 	./geometry_test
 
 clean:
