@@ -1,3 +1,4 @@
 sudo: required
 install: make dep
+dist: precise
 script: make test
