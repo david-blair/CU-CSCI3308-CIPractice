@@ -148,28 +148,33 @@ END_TEST
 
 START_TEST(test_2d_area_triangle)
 {
-    a.x = 0;
-    a.y = 0;
-    b.x = 2.0;
-    b.y = 0.0;
-    c.x = 2.0;
-    c.y = 0;
+    coord_2d_t a;
+    coord_2d_t b;
+    coord_2d_t c;
+    
+    a.x = 5;
+    a.y = 10;
+    b.x = 10;
+    b.y = 15;
+    c.x = 10;
+    c.y = 5;
 
-    ck_assert(coord_2d_area_triangle(&a , &b , &c) == 2.0);
+    ck_assert(coord_2d_area_triangle(&a , &b , &c) == 25);
 
 
     a.x = 1;
-    a.y = 1;
-    b.x = 1.0;
-    b.y = 3.0;
-    c.x = 3.0;
-    c.y = 1;
+    a.y = 0;
+    b.x = 10;
+    b.y = 15;
+    c.x = 10;
+    c.y = 5;
 
-    ck_assert(coord_2d_area_triangle(&a , &b , &c) == 2.0);
+    ck_assert(coord_2d_area_triangle(&a , &b , &c) == 45);
 
 
 
 }
+END_TEST
 
 /* coord_2d Test Suite */
 Suite* coord_2d_suite(void)
